@@ -1,0 +1,56 @@
+# ===== 实战项目源码（独立 Git 仓库，不纳入学习仓库） =====
+项目实战/mall/
+项目实战/mall-admin-web/
+项目实战/mall-app-web/
+项目实战/mall-swarm/
+项目实战/mall-infra/
+
+# ===== 敏感信息：绝不提交 =====
+.env
+.env.*
+*.pem
+*.key
+*_rsa
+*_rsa.pub
+**/secrets/
+application-local.yml
+application-prod.yml
+
+# ===== 构建产物 =====
+target/
+build/
+out/
+*.class
+*.jar
+!.mvn/wrapper/maven-wrapper.jar
+*.war
+
+# ===== 作业过程中的临时产物 =====
+tree.txt
+cp.txt
+startup.log
+*.log
+logs/
+*.hprof
+*.dump
+
+# ===== IDE =====
+.idea/
+*.iml
+*.iws
+*.ipr
+.vscode/
+.settings/
+.classpath
+.project
+
+# ===== 前端 =====
+node_modules/
+dist/
+.npm/
+pnpm-lock.yaml.bak
+
+# ===== macOS =====
+.DS_Store
+.AppleDouble
+._*
