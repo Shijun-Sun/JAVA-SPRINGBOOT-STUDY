@@ -1,0 +1,1 @@
+package com.study.mall.product.domain.entity;

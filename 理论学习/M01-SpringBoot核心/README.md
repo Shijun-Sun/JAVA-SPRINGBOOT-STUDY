@@ -27,14 +27,14 @@
 
 | 章节 | 主题 | 状态 |
 |------|------|------|
-| 01 | 工程骨架与启动原理（含自动配置机制） | ✅ 已出 |
-| 02 | IoC 容器与依赖注入：Bean 生命周期、作用域、条件装配 | 待出 |
-| 03 | 配置体系：application.yml、Profile、外部化配置优先级、配置加密 | 待出 |
-| 04 | Web 层：REST API 设计、参数绑定、统一响应、Bean Validation | 待出 |
-| 05 | 全局异常处理与错误契约（ProblemDetail / 业务错误码体系） | 待出 |
-| 06 | 分层架构与对象边界：Entity·DTO·VO·Query，对象转换 | 待出 |
-| 07 | AOP、Filter、Interceptor：日志、traceId、耗时统计的正确位置 | 待出 |
-| 08 | 测试：JUnit 5 + MockMvc + 切片测试 + 测试金字塔 | 待出 |
+| 01 | 工程骨架与启动原理（含自动配置机制） | ✅ 已学完 |
+| 02 | IoC 容器与依赖注入：Bean 生命周期、作用域、条件装配 | ✅ 已出 |
+| 03 | 配置体系：application.yml、Profile、外部化配置优先级、配置加密 | ✅ 已出 |
+| 04 | Web 层：REST API 设计、参数绑定、统一响应、Bean Validation | ✅ 已出 |
+| 05 | 全局异常处理与错误契约（ProblemDetail / 业务错误码体系） | ✅ 已出 |
+| 06 | 分层架构与对象边界：Entity·DTO·VO·Query，对象转换 | ✅ 已出 |
+| 07 | AOP、Filter、Interceptor：日志、traceId、耗时统计的正确位置 | ✅ 已出 |
+| 08 | 测试：JUnit 5 + MockMvc + 切片测试 + 测试金字塔 | ✅ 已出 |
 | 09 | 打包运行与外部化配置，Actuator 入门 | 待出 |
 
 > 讲义按你的推进速度逐章发布，不提前堆。
@@ -45,7 +45,14 @@
 
 | 作业 | 主题 | 对应章节 | 状态 |
 |------|------|---------|------|
-| 01 | 搭建 product-service 骨架 + 自动配置探查 | 01 | ✅ 已出，待提交 |
+| 01 | 搭建 product-service 骨架 + 自动配置探查 | 01 | ✅ 已完成 |
+| 02 | IoC 容器与依赖注入实战 | 02 | ✅ 交付部分完成（构造器注入已审计通过）；任务 2~5 为 IoC 机制演示，属实验区，未做不阻塞 |
+| 03 | 配置体系实战 | 03 | ✅ 交付合规（YAML 拆分 / `@ConfigurationProperties` 校验 / `/api/config-info` 已落地）；优先级与思考题待用户补填 |
+| 04 | Web 层实战 | 04 | ✅ 已完成 |
+| 05 | 全局异常处理实战 | 05 | ✅ 已完成 |
+| 06 | 分层架构实战 | 06 | ✅ 已完成（分层审计通过 + `ProductSummaryVO`/`ProductQuery`/`Page<T>`/分页过滤已交付并运行验证） |
+| 07 | AOP/Filter/Interceptor 实战（traceId + 访问日志 + 顺序观察实验） | 07 | ✅ 已出，待提交 |
+| 08 | 单元与集成测试实战（Service 单测 + WebMvc 切片 + 集成测试） | 08 | ✅ 已交付并通过门禁核验（14 测试跑绿：ProductServiceTest 5 / ProductControllerTest 5 / ProductApiIntegrationTest 3 / 冒烟 1） |
 
 ---
 

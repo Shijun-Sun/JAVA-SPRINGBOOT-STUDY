@@ -1,0 +1,21 @@
+# 测试专用配置：覆盖 classpath 上的主 application.yml。
+# 提供完整的 product.* 配置，使 @SpringBootTest 在不指定 Profile 时
+# 也能通过 ProductConfig 的绑定与校验（主配置的公共段本身不含 pagination/storage，
+# 这些字段只在 dev/prod Profile 中，测试不应依赖某个真实环境 Profile）。
+spring:
+  application:
+    name: product-service
+
+product:
+  name: "Product Service (test)"
+  pricing:
+    currency: CNY
+    cache-time: 10s
+  pagination:
+    max-size: 100
+  storage:
+    endpoint: "http://localhost:9000"
+    allowed-images:
+      - "image/png"
+      - "image/jpeg"
+      - "image/gif"

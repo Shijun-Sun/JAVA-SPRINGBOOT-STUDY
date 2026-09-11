@@ -1,0 +1,22 @@
+spring:
+  application:
+    name: product-service
+
+# 公共配置：只放各环境通用的安全默认值
+product:
+  name: "Product Service"
+  pricing:
+    currency: CNY
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "conditions"
+          - "beans"
+          - "mappings"
+
+logging:
+  pattern:
+    level: "[%X{traceId:-}] %5p"

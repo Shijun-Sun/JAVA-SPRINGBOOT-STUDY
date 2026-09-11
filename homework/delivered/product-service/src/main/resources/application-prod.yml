@@ -1,0 +1,11 @@
+product:
+  pricing:
+    cache-time: 5m
+  pagination:
+    max-size: 50
+  storage:
+    # 生产环境必须通过外部环境变量注入，不得硬编码真实地址
+    endpoint: ${PRODUCT_STORAGE_ENDPOINT}
+    allowed-images:
+      - "image/png"
+      - "image/jpeg"

@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: web-chain-order-lab
+
+server:
+  port: 8082
+
+# 顺序观察日志用 INFO 即可看到；补全 TODO 后每个环节各打一行
+logging:
+  level:
+    com.study.lab: INFO
+  pattern:
+    console: "%d{HH:mm:ss.SSS} %-5level %logger{0} - %msg%n"

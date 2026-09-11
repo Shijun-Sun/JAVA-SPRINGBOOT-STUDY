@@ -1,0 +1,11 @@
+product:
+  pricing:
+    cache-time: 10s
+  pagination:
+    max-size: 100
+  storage:
+    endpoint: "http://localhost:9000"
+    allowed-images:
+      - "image/png"
+      - "image/jpeg"
+      - "image/gif"

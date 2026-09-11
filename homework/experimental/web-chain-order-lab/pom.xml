@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>4.1.0</version>
+        <relativePath/>
+    </parent>
+
+    <groupId>com.study.lab</groupId>
+    <artifactId>web-chain-order-lab</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>web-chain-order-lab</name>
+    <description>实验：观察 Filter / Interceptor / AOP 的执行顺序（知识点实验，非正式交付）</description>
+
+    <properties>
+        <java.version>21</java.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-webmvc</artifactId>
+        </dependency>
+
+        <!--
+          AOP 支持：正常应使用 spring-boot-starter-aop。
+          本实验环境离线，仅缓存了 aspectjweaver，故直接引入它并在启动类上
+          @EnableAspectJAutoProxy 开启 @AspectJ 代理。联网环境可换回 starter-aop。
+        -->
+        <dependency>
+            <groupId>org.aspectj</groupId>
+            <artifactId>aspectjweaver</artifactId>
+            <!-- 显式锁定为本地已缓存版本（父 BOM 默认 1.9.25.1 未缓存，离线不可用） -->
+            <version>1.9.25</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+</project>
